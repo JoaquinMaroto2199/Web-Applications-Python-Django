@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 
 
+
 # Create your views here.
 def entrada(request):
     return render(request, "core/entrada.html")
