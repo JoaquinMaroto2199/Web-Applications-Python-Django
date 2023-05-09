@@ -1,9 +1,24 @@
 {% extends 'core/base.html' %}
 
+{% block title %}Acerca de{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1>Acerca de</h1>
+<span class="subheading">Biografía</span>
+{% endblock %}
 
 {% block content %}
-<h4> Esta es la información extra de la parte de abajo de la página web </h4>
-<p> Copyright </p>
-<p> Reserved Rights </p>
+<div class="row"> 
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Joaquin Maroto</h2>   
+        <p>Nacido en Madrid, España.</p>
+        <p>Gana todos los dias a Ma en el COD</p>
 
+    </div>
+</div>
 {% endblock %}
