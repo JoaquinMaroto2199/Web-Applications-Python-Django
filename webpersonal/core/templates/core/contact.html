@@ -2,7 +2,7 @@
 
 {% block title %}Contacto{% endblock %}
 
-{% block background %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+{% block background %} {% load static %} {% static 'core/img/contact-bg.jpg' %} {% endblock %}
 
 {% block headers %}
 <h1>Contacto</h1>
@@ -10,13 +10,11 @@
 {% endblock %}
 
 {% block content %}
-<div class="row"> 
     <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Para ponerse en contacto conmigo.</p>
-        <p>Por favor, llamar al siguiente número de teléfono.</p>
+        <p> To get in contact with me please send me an email </p>
+        <a href="joaquinmarpas@gmail.com">Here</a>
         <br>
-        <p><b>Teléfono:</b> +34 000 000 000</p>
-        <p><b>Honorarios:</b> XXX</p>
+        <p><b>Teléfono:</b> +09 876 543 210</p>
+        <p><b>Honorarios:</b> 60€/h (precio base)</p>
     </div>
-</div>
 {% endblock %}

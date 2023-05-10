@@ -2,23 +2,20 @@
 
 {% block title %}Acerca de{% endblock %}
 
-{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+{% block background %} {% load static %} {% static 'core/img/about-bg.jpg' %} {% endblock %}
 
 {% block headers %}
-<h1>Acerca de</h1>
-<span class="subheading">Biografía</span>
+    <h1>Acerca de</h1>
+    <span class="subheading">Biografía</span>
 {% endblock %}
 
 {% block content %}
-<div class="row"> 
     <div class="col-lg-3 col-md-4 offset-lg-1">
-        <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
-    </div>
-    <div class="col-lg-7 col-md-8">
-        <h2 class="section-heading">Joaquin Maroto</h2>   
-        <p>Nacido en Madrid, España.</p>
-        <p>Gana todos los dias a Ma en el COD</p>
-
-    </div>
-</div>
+            <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading">Joaquin Maroto</h2>   
+            <p>Nacido en Madrid. Estudio en Segovia una ingenieria de datos pero decidió enfocarse en desarrollo de Software.</p>
+            <p>En especifico en desarrollo web.</p>
+            </div>
 {% endblock %}
