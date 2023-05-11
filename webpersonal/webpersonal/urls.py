@@ -1,6 +1,5 @@
 """
 URL configuration for webpersonal project.
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
@@ -14,15 +13,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
-from core import views
+from core import views as core_views
+from portfolio import views as portfolio_views
+
+from django.conf import settings
 
 urlpatterns = [
-    path('', views.entrada, name = "entrada"),
-    path('home', views.home, name = "home"),
-    path('portafolio', views.portafolio, name= "portafolio"),
-    path('contact', views.contacto, name = "contact"),
-    path("about", views.about, name = "about"),
-    path('admin/', admin.site.urls),
+    path('', core_views.home, name="home"),
+    path('contact', core_views.contact, name = "contact"),
+    path("about", core_views.about, name = "about"),
+    path("portfolio", portfolio_views.portfolio, name = "portfolio"),
+    path('admin/', admin.site.urls)
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
