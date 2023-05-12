@@ -21,4 +21,4 @@ pycodestyle = "*"
 python_version = "3.11"
 
 [scripts]
-webpersonal = "python webpersonal/manage.py runserver"
+personalweb = "python personalweb/manage.py runserver"
