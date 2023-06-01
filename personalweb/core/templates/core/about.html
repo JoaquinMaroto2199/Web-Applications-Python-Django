@@ -1,21 +1,36 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Acerca de{% endblock %}
+{% block title %}About{% endblock %}
 
 {% block background %} {% load static %} {% static 'core/img/about-bg.jpg' %} {% endblock %}
 
 {% block headers %}
-    <h1>Acerca de</h1>
-    <span class="subheading">Biografía</span>
+    <h1>About</h1>
+    <span class="subheading">Biography</span>
 {% endblock %}
 
 {% block content %}
     <div class="col-lg-3 col-md-4 offset-lg-1">
-            <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
-            </div>
-            <div class="col-lg-7 col-md-8">
-            <h2 class="section-heading">Joaquin Maroto</h2>   
-            <p>Nacido en Madrid. Estudio en Segovia una ingenieria de datos pero decidió enfocarse en desarrollo de Software.</p>
-            <p>En especifico en desarrollo web.</p>
-            </div>
+        <img class="img-fluid avatar" src="{% static 'core/img/photo_joaquin.jpeg' %}" alt="">
+
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Joaquin Maroto</h2>   
+        <p>
+            Passionate developer born in Madrid. Studied Data Science & Engineer at IE University. And decided to further his studies by attending a Fullstack Engineering 
+            Bootcamp provided by Ironhack where he learnt about MERN, OOP, API design, front-end & back-end, web hosting & cross platform compatibility.
+        </p>
+        <p>
+            Furthermore, he has worked at IBM as a backend and data engineer where he coordinated 3 junior developers in the migration of NoSQL data between MongoDB and Hive using Scala Spark.
+            And wirked in the development of server-side applications of one of the biggest banks in Spain using REST and gRPC APIs.
+        </p>
+        <p>
+            Additionally, he is also interested in helping others and has been part of different ONGs around the world for a total of 6 years. 
+            Where he personally constructed public buildings, taught English and cleaned the environment.
+        </p>
+        <p>
+            Finally, to learn more about the personal projects that he has been working on and the certifications that he has obtained over the past years, 
+            visit <a href="{% url 'portfolio' %}">Portfolio</a>.
+        </p>
+    </div>
 {% endblock %}
