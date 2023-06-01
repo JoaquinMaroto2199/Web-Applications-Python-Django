@@ -2,16 +2,16 @@ from django.db import models
 
 # Create your models here.
 class Project(models.Model):
-    title = models.CharField(max_length=100, verbose_name="Titulo")
-    description = models.TextField(verbose_name="Descripcion")
-    image = models.ImageField(verbose_name="Imagen", upload_to="projects")
+    title = models.CharField(max_length=100, verbose_name="Title")
+    description = models.TextField(verbose_name="Description")
+    image = models.ImageField(verbose_name="Image", upload_to="projects")
     link = models.URLField(null = True, blank = True)
-    created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha Creación")
-    updated = models.DateTimeField(auto_now=True, verbose_name="Fecha Modificación")
+    created = models.DateTimeField(auto_now_add=True, verbose_name="Creation Date")
+    updated = models.DateTimeField(auto_now=True, verbose_name="Modification Date")
 
     class Meta:
-        verbose_name = "proyecto"
-        verbose_name_plural = "proyectos"
+        verbose_name = "Project"
+        verbose_name_plural = "Projects"
         ordering = ["-created"]
 
     def __str__(self):
